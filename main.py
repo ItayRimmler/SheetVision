@@ -310,5 +310,3 @@ def SheetVision(img_file):
     #         for note in notes:
     #             f.write(note)
     #             f.write("\n")
-
-    print(f"done page")
