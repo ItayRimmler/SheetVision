@@ -120,18 +120,18 @@ def SheetVision(img_file):
 
     # print("Merging staff image results...")
     staff_recs = merge_recs(staff_recs, 0.01)
-    staff_recs_img = img.copy()
-    for r in staff_recs:
-        r.draw(staff_recs_img, (0, 0, 255), 2)
-    cv2.imwrite(f'staff_recs_img{name}.png', staff_recs_img)
+    # staff_recs_img = img.copy()
+    # for r in staff_recs:
+    #     r.draw(staff_recs_img, (0, 0, 255), 2)
+    # cv2.imwrite(f'staff_recs_img{name}.png', staff_recs_img)
     # open_file('staff_recs_img.png')
 
     # print("Discovering staff locations...")
     staff_boxes = merge_recs([Rectangle(0, r.y, img_width, r.h) for r in staff_recs], 0.01)
-    staff_boxes_img = img.copy()
-    for r in staff_boxes:
-        r.draw(staff_boxes_img, (0, 0, 255), 2)
-    cv2.imwrite(f'staff_boxes_img{name}.png', staff_boxes_img)
+    # staff_boxes_img = img.copy()
+    # for r in staff_boxes:
+    #     r.draw(staff_boxes_img, (0, 0, 255), 2)
+    # cv2.imwrite(f'staff_boxes_img{name}.png', staff_boxes_img)
     # open_file('staff_boxes_img.png')
 
     # print("Matching sharp image...")
@@ -139,10 +139,10 @@ def SheetVision(img_file):
 
     # print("Merging sharp image results...")
     sharp_recs = merge_recs([j for i in sharp_recs for j in i], 0.5)
-    sharp_recs_img = img.copy()
-    for r in sharp_recs:
-        r.draw(sharp_recs_img, (0, 0, 255), 2)
-    cv2.imwrite(f'sharp_recs_img{name}.png', sharp_recs_img)
+    # sharp_recs_img = img.copy()
+    # for r in sharp_recs:
+    #     r.draw(sharp_recs_img, (0, 0, 255), 2)
+    # cv2.imwrite(f'sharp_recs_img{name}.png', sharp_recs_img)
     # open_file('sharp_recs_img.png')
 
     # print("Matching flat image...")
@@ -150,10 +150,10 @@ def SheetVision(img_file):
 
     # print("Merging flat image results...")
     flat_recs = merge_recs([j for i in flat_recs for j in i], 0.5)
-    flat_recs_img = img.copy()
-    for r in flat_recs:
-        r.draw(flat_recs_img, (0, 0, 255), 2)
-    cv2.imwrite(f'flat_recs_img{name}.png', flat_recs_img)
+    # flat_recs_img = img.copy()
+    # for r in flat_recs:
+    #     r.draw(flat_recs_img, (0, 0, 255), 2)
+    # cv2.imwrite(f'flat_recs_img{name}.png', flat_recs_img)
     # open_file('flat_recs_img.png')
 
     # print("Matching quarter image...")
@@ -161,10 +161,10 @@ def SheetVision(img_file):
 
     # print("Merging quarter image results...")
     quarter_recs = merge_recs([j for i in quarter_recs for j in i], 0.5)
-    quarter_recs_img = img.copy()
-    for r in quarter_recs:
-        r.draw(quarter_recs_img, (0, 0, 255), 2)
-    cv2.imwrite(f'quarter_recs_img{name}.png', quarter_recs_img)
+    # quarter_recs_img = img.copy()
+    # for r in quarter_recs:
+    #     r.draw(quarter_recs_img, (0, 0, 255), 2)
+    # cv2.imwrite(f'quarter_recs_img{name}.png', quarter_recs_img)
     # open_file('quarter_recs_img.png')
 
     # print("Matching half image...")
@@ -172,10 +172,10 @@ def SheetVision(img_file):
 
     # print("Merging half image results...")
     half_recs = merge_recs([j for i in half_recs for j in i], 0.5)
-    half_recs_img = img.copy()
-    for r in half_recs:
-        r.draw(half_recs_img, (0, 0, 255), 2)
-    cv2.imwrite(f'half_recs_img{name}.png', half_recs_img)
+    # half_recs_img = img.copy()
+    # for r in half_recs:
+    #     r.draw(half_recs_img, (0, 0, 255), 2)
+    # cv2.imwrite(f'half_recs_img{name}.png', half_recs_img)
     # open_file('half_recs_img.png')
 
     # print("Matching whole image...")
@@ -183,10 +183,10 @@ def SheetVision(img_file):
 
     # print("Merging whole image results...")
     whole_recs = merge_recs([j for i in whole_recs for j in i], 0.5)
-    whole_recs_img = img.copy()
-    for r in whole_recs:
-        r.draw(whole_recs_img, (0, 0, 255), 2)
-    cv2.imwrite(f'whole_recs_img{name}.png', whole_recs_img)
+    # whole_recs_img = img.copy()
+    # for r in whole_recs:
+    #     r.draw(whole_recs_img, (0, 0, 255), 2)
+    # cv2.imwrite(f'whole_recs_img{name}.png', whole_recs_img)
     # open_file('whole_recs_img.png')
 
     note_groups = []
